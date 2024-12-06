@@ -1,0 +1,52 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url("./../assets/background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.card h2 {
+  color: #1a5f7a;
+  margin-top: 0;
+  text-align: center;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.portrait {
+  width: 180px;
+  height: 140px;
+  border-radius: 15px;
+  object-fit: cover;
+}

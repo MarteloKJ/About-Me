@@ -1,0 +1,147 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coming-soon__header {
+  width: 100%;
+  padding: 2rem;
+}
+
+.coming-soon__logo {
+  width: 100px;
+}
+
+.coming-soon__image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.coming-soon__content {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.coming-soon__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: var(--dark-grayish-red);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.coming-soon__title--highlight {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.coming-soon__description {
+  color: var(--desaturated-red);
+  margin-bottom: 2rem;
+}
+
+.coming-soon__form {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.coming-soon__input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--dark-grayish-red);
+  font-family: inherit;
+}
+
+.coming-soon__input::placeholder {
+  color: var(--desaturated-red);
+}
+
+.coming-soon__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 65px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coming-soon__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .coming-soon {
+    flex-direction: row-reverse;
+    min-height: 100vh;
+  }
+
+  .coming-soon__header {
+    position: absolute;
+    top: 4rem;
+    left: 10%;
+    padding: 0;
+  }
+
+  .coming-soon__image {
+    flex: 1;
+    max-height: none;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .coming-soon__content {
+    flex: 1;
+    text-align: left;
+    padding: 0 20% 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .coming-soon__title {
+    font-size: 4rem;
+  }
+
+  .coming-soon__form {
+    margin: 0;
+  }
+}
